@@ -1,40 +1,20 @@
-# ionictest
+# Capacitor Application Running Preact with Ionic Framework Web Components
 
-## CLI Commands
+<div>
+<img src="readme-images/Simulator Screen Shot - iPhone 11 Pro Max - 2020-03-30 at 00.33.35.png" height=800px />
+<img src="readme-images/device-2020-03-30-003505.png" height=800px />
+</div>
 
-``` bash
-# install dependencies
-npm install
+## Whats This Is...
+This was just a basic test to get it working, I am certain there are some optimizations... currently I am loading the ionic libraries in the index html, and having issues with packaging for production builds.
 
-# serve with hot reload at localhost:8080
-npm run dev
+Have done much to test the routing, but the controller access is demonstrated with the actionsheet and the Ionic Styles are comming through which can be seen based on the screenshots
 
-# build for production with minification
-npm run build
+This is really just a test to show that the ionic web-components can work with javascript based frameworks, for the most part, I am certain there will be some potential gotchas, but hey it is a great set of components and they are just getting started
 
-# test the production build locally
-npm run serve
-
-# run tests with jest and preact-render-spy 
-npm run test
-```
-
-For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
-
-
-
-## HOW THIS WORKS
-
-- running from local host, see capacitor.config.json
-- getting weird capacitor url scheme error when running with out it
-- cannot make a production build because of some error with Uglify
+## Whats Working So Far
+- running in web browser using default commands
+- running from local host for live-reload, see capacitor.config.json
+- cannot make a production build because of some error with Uglify, removed it from the build process
 - have to turn off pre-rendering in the build, see package.json script modification
 
-
-## TO WORK WITH CAPACITOR
-- turn off prerendering
-- building for deployment on device, not sure why yet
-  - npm run -s serve
-  - then kill the server
-  - then do npm cap sync ios
-- when i run the same commands, minus the server, the build doesnt work properly
