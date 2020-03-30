@@ -1,0 +1,12 @@
+{
+  "appId": "com.fiwic.ionictest",
+  "appName": "ionictest",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "cordova": {},
+  "server": {
+    "allowNavigation": ["example.org", "*.example.org", "192.0.2.1","*://cdn.jsdelivr.net/*"]
+
+  }
+}

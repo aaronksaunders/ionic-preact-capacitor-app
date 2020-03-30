@@ -1,0 +1,58 @@
+{
+  "private": true,
+  "name": "ionictest",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "per-env",
+    "start:production": "npm run -s serve",
+    "start:development": "npm run -s dev",
+    "build": "preact build --no-production --no-prerender",
+    "serve": "preact build --no-prerender && sirv build --cors --single",
+    "cap:ios": "preact build --no-prerender && cap sync ios",
+    "cap:android": "preact build --no-prerender && cap sync android",
+    "dev": "preact watch",
+    "lint": "eslint src",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "preact",
+    "ignorePatterns": [
+      "build/"
+    ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-preact-pure": "^2.0.0",
+    "eslint": "^6.0.1",
+    "eslint-config-preact": "^1.1.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "jest-preset-preact": "^1.0.0",
+    "node-sass": "^4.13.1",
+    "per-env": "^1.0.2",
+    "preact-cli": "^3.0.0-rc.6",
+    "preact-render-spy": "^1.2.1",
+    "sass-loader": "^7.3.1",
+    "sirv-cli": "^0.4.5",
+    "stylus": "0.54.7",
+    "stylus-loader": "3.0.2"
+  },
+  "dependencies": {
+    "@capacitor/cli": "^1.5.2",
+    "@capacitor/core": "^1.5.2",
+    "@capacitor/ios": "^1.5.2",
+    "@ionic/core": "^5.0.7",
+    "preact": "^10.3.2",
+    "preact-render-to-string": "^5.1.4",
+    "preact-router": "^3.2.1",
+    "schema-utils": "^2.6.5"
+  },
+  "jest": {
+    "preset": "jest-preset-preact",
+    "setupFiles": [
+      "<rootDir>/tests/__mocks__/browserMocks.js",
+      "<rootDir>/tests/__mocks__/setupTests.js"
+    ]
+  }
+}
