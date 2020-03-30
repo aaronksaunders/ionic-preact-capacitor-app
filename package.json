@@ -39,6 +39,7 @@
     "stylus-loader": "3.0.2"
   },
   "dependencies": {
+    "@capacitor/android": "^1.5.2",
     "@capacitor/cli": "^1.5.2",
     "@capacitor/core": "^1.5.2",
     "@capacitor/ios": "^1.5.2",
